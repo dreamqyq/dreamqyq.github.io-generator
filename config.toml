@@ -1,4 +1,4 @@
-baseURL = "https://www.enochqin.xyz"
+baseURL = "https://enochqin.xyz"
 languageCode = "zh-CN"
 title = "Enoch's Blog"
 theme = "maupassant"
