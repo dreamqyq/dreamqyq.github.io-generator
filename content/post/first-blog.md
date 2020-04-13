@@ -4,7 +4,7 @@ date: 2020-04-12T13:02:28+08:00
 draft: false
 ---
 
-# 使用Hogu搭建博客
+## 使用Hogu搭建博客
 
 [Hugo官网 快速开始](https://gohugo.io/getting-started/quick-start/)
 
