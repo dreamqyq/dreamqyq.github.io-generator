@@ -2,8 +2,8 @@
 title: "使用Hugo搭建个人博客网站"
 date: 2020-04-12T19:41:28+08:00
 draft: false
-tags: ["其他"]
-categories: ["其他"] 
+tags: ["博客"]
+categories: ["Linux"] 
 ---
 
 ## 前言
