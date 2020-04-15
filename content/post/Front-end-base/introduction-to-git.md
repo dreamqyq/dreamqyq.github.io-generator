@@ -53,7 +53,7 @@ tags: ["git"]
 ## 7、git中commit合并
 
 大致流程：
-```
+```bash
 git log |head
 git rebase -i d1
 # if fail, use git rebase --abort
@@ -70,13 +70,13 @@ git push --force
 
 3. 选取要合并的提交
     - 执行了`rebase`命令之后，会弹出一个窗口，头几行如下：
-    ```
+    ```shell
     pick 3ca6ec3   '注释**********'
     pick 1b40566   '注释*********'
     pick 53f244a   '注释**********'
     ```
    - 将`pick`改为`squash`或者`s`,之后保存并关闭文本编辑窗口即可。改完之后文本内容如下：
-    ```
+    ```sh
     pick 3ca6ec3   '注释**********'
     s 1b40566   '注释*********'
     s 53f244a   '注释**********'
@@ -85,7 +85,7 @@ git push --force
 `git rebase --abort `
 
 5. 如果没有冲突，或者冲突已经解决，则会出现如下的编辑窗口，输入提交信息后退出即可。
-```
+```bash
 # This is a combination of 4 commits.  
 #The first commit’s message is:  
 注释......

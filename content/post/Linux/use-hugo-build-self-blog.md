@@ -24,7 +24,7 @@ categories: ["Linux"]
 ### Hugo安装
 
 #### Mac
-```
+```sh
 brew install hugo
 hugo version
 ```
@@ -37,11 +37,11 @@ hugo version
 也可以根据接下来的步骤依次执行：
 
 1. 创建一个新的项目（quickstart 是项目名称，可以改成你想要的名字）
-    ```
+    ```sh
     hugo new site quickstart
     ```
 0. 添加一个主题（这里会安装一个默认主题ananke）
-    ```
+    ```sh
     cd quickstart
     git init
     git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
@@ -49,17 +49,17 @@ hugo version
     echo 'theme = "ananke"' >> config.toml
     ```
 0. 创建一个新的博客
-    ```
+    ```sh
     hugo new posts/my-first-post.md
     ```
     注意：博客文件开头的 `draft: false`要改成true，否则改博客不会被生成到public目录中。
 0. 开启 Hugo Serve，用于本地预览
-    ```
+    ```sh
     hugo server -D
     ```
 0. 定制主题，如果对步骤2安装的默认主题不满意，可以自己选择一个主题进行替换
     - 重复步骤2，把你想要替换的主题GitHub路径替换一下就好，然后在配置文件`config.toml`里修改下面的配置
-    ```
+    ```js
     baseURL = "https://example.org/"
     languageCode = "en-us"
     title = "My New Hugo Site"
@@ -70,7 +70,7 @@ hugo version
     - title 即博客名称
     - __theme__ 这里是重点，把theme的值改成你替换的主题的名称，然后主题就生效啦。
 0. 构建静态页面
-    ```
+    ```sh
     hugo -D
     ```
     这个命令执行以后会生成一个`./public`的目录，将这个目录上传到GitHub，创建一个名为`dreamqyq.github.io`的项目（dreamqyq 这里替换成你的GitHub账号名），然后使用GitHub Pages就可以让别人来看你的博客啦。

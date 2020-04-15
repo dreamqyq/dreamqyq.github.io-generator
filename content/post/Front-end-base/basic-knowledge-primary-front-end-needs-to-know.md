@@ -57,7 +57,7 @@ categories: ["前端基础"]
 ---
 
 ### No.1 HTML基本格式 & 媒体查询 & `<svg>` & 文件编码
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,7 +97,7 @@ categories: ["前端基础"]
 如在引入外部样式时，只有满足条件最大宽度为800px时，example.css才生效：
 `<link rel="stylesheet" media="(max-width: 800px)" href="example.css" />`
 在CSS内部，也可以用media来设置特定的情况下让某些样式生效，如下，即当最大宽度为600px时，该样式生效：
-```
+```css
 <style>
   @media (max-width: 600px) {
      ……
@@ -109,13 +109,13 @@ categories: ["前端基础"]
 - 使用动态 REM 方案保证手机端的显示效果
 rem指的是根元素的字体大小，根元素一般指的是`<html>`
 动态rem即在js中设置
-```
+```js
 var pageWidth = window.innerWidth
  document.write('<style>html{font-size:'+pageWidth/10+'px;}</style>')
 ```
 让1rem=0.1设备宽度，然后所有的css宽高使用rem为单位即可。
 使用scss可以自动让px转化为rem：
-```
+```scss
 @function px( $px ){
   @return $px/$designWidth*10 + rem;
 }
@@ -145,7 +145,7 @@ css3 中的新特性，比较常用的：
 ### No.4 闭包
 
 - 闭包的定义：如果一个函数使用了它范围外的变量，那么（这个函数和这个变量）就叫做闭包。举个例子：
-```
+```javascript
 function foo(){
   var local = 1
   function bar(){
@@ -162,7 +162,7 @@ func()
 
 - 闭包的用途：我们之所以使用闭包，是应为闭包可以用来「间接访问一个变量」。换句话说，「隐藏一个变量」。
 举个例子：
-```
+```js
 !function(){
 
   var lives = 50
@@ -203,7 +203,7 @@ func()
 `bind` 是返回对应函数，便于稍后调用；`apply` 、`call `则是立即调用 。
 
 举例说明：
-```
+```js
 var obj = {
     x: 81,
 };
@@ -345,7 +345,7 @@ HTTP响应报文也是由三部分组成: 状态码, 响应报头和响应报文
 ### No.10 数组去重
 
 ES5写法1：
-```
+```js
 function unique(array){
   let tempArray = []
   let hash = {}
@@ -359,7 +359,7 @@ function unique(array){
 }
 ```
 ES5写法2：当数组中出现数字`3` 和字符串 ` '3' `时，第一种写法会将其当成同一个值返回，而第二种写法可以判断数字`3` 和字符串 ` '3' `的不同。
-```
+```js
 function uniqueCom(array) {
   let hash = {}
   let tempArray = []
@@ -375,7 +375,7 @@ function uniqueCom(array) {
 ```
 ES6写法：使用`Set`对象，[MDN文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)
 注：用`...`(展开操作符)操作符将Set转换为Array
-```
+```js
 function unique6(array){
   return [...new Set(array)]
 }

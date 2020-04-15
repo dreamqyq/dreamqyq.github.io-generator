@@ -7,7 +7,7 @@ categories: ["Algorithm"]
 ---
 ## 冒泡排序 —— O(n^2)
 
-```
+```js
 function bubleSort(arr) {
   for(let i = 0; i < arr.length-1 /*i代表轮数*/; i++) {
     for(let j = 0; j < arr.length - 1 - i /*j代表当前轮选中的元素下标*/; j++) {
@@ -26,7 +26,7 @@ console.log(arr)
 
 ## 选择排序 —— O(n^2)
 
-```
+```js
 function sectionSort(arr) {
   for(let min = i = 0; i < arr.length - 1 /*i代表轮数*/; i++) {
     min = i
@@ -46,7 +46,7 @@ console.log(arr)
 
 ## 插入排序 —— O(n^2)
 - 普通版
-```
+```js
 function insertionSort(arr) {
   for(var i = 1; i < arr.length; i++) {
     var temp = arr[i]
@@ -63,7 +63,7 @@ insertionSort(arr)
 console.log(arr)
 ```
 - JS版
-```
+```js
 function insertionSort(arr) {
   for(let i = 1; i < arr.length; i++) {
     for(let j = 0; j < i; j++) {
@@ -84,7 +84,7 @@ console.log(arr)
 
 ## 快速排序 ——  O(nlogn)
 - 普通版（存在空间浪费）
-```
+```js
 unction quickSort(arr) {
   if(arr.length <= 1) {
     return arr
@@ -106,7 +106,7 @@ quickSort(arr)
 console.log(arr)
 ```
 - 优化版（在原数组上操作）
-```
+```js
 function quickSort(arr) {
   function _quickSort(arr, start, end) {
     if(start >= end) return
@@ -132,7 +132,7 @@ function quickSort(arr) {
 
 ## 归并排序 ——  O(nlogn)
 
-```
+```js
 /*
 left : [1, 3, 4, 7]
 right: [2, 5, 6, 9]
@@ -155,7 +155,7 @@ function mergeSort(arr) {
 
 ## 希尔排序 —— O(nlog2n)
 
-```
+```js
 function shellSort(arr) {
   var temp
   var len = arr.length

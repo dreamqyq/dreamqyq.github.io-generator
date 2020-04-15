@@ -14,7 +14,7 @@ categories: ["Linux"]
 
 - 首先说是在控制中心的启动菜单中，可以通过拖拽高亮项进行改变启动顺序，发现拖拽不了
 - 然后尝试改一下grub.cfg的配置（在boot/grub目录下），把Windows的启动设置移动到deepin的上面
-```
+```sh
 ### BEGIN /etc/grub.d/30_os-prober ###
 menuentry 'Windows Boot Manager (on /dev/sda2)' --class windows --class os $menuentry_id_option 'osprober-efi-7C8F-9031' {
 	insmod part_gpt
@@ -39,12 +39,12 @@ menuentry 'Windows Boot Manager (on /dev/sda2)' --class windows --class os $menu
 - 首先进入系统前通过启动盘启动（本人是联想笔记本，按<kbd>F12</kbd>）
 - 进入系统待安装界面，按<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F1</kbd>（因为可能没反应，可以试着再按<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F2</kbd>）到达可以输入命令的界面
 - 输入以下命令
-```
+```sh
 $ sudo service lightdm stop  //关闭图形界面。不过由于目前的界面本来就不是图形界面，亲测可以这一句可以省略
 $ startx
 ```
 - 进入Live CD系统后打开终端，输入以下命令
-```
+```sh
 $ sudo su
 # mount /dev/sda4 /mnt（注意先确认自己的 / 分区即deepin的系统分区是 sdaX）
 # mount /dev/sda1 /mnt/boot/efi //注意你的efi是不是sda1，如果不是要改成你自己电脑中Windows的EFI所在磁盘
