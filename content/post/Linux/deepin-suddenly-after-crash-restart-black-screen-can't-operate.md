@@ -2,7 +2,7 @@
 title: "关于Deepin突然死机、重启后黑屏无法操作"
 date: 2018-07-13
 draft: false
-tags: ["Linux"]
+tags: ["Deepin"]
 categories: ["Linux"] 
 ---
 

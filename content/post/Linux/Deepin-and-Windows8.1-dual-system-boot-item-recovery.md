@@ -2,7 +2,7 @@
 title: "Deepin与Windows8.1双系统启动项恢复"
 date: 2018-05-14
 draft: false
-tags: ["Linux"]
+tags: ["Deepin"]
 categories: ["Linux"] 
 ---
 
